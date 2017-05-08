@@ -1,0 +1,8 @@
+<h1> Trends </h1>
+
+<% @trends.each do |trend| %>
+  <a href="/trends/<%= trend.id%>">
+    <h2> <%= trend.title %> </h2>
+    <img src='<%= trend.photo_url %>' alt="<%= trend.title %>'s image" />
+  </a>
+<%end%>
