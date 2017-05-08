@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+## Planning
+ERD
+https://drive.google.com/file/d/0Bw3u4FmGZdiKeHoyYW5EcWJxVW8/view?usp=sharing
