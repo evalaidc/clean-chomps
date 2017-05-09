@@ -1,4 +1,6 @@
 <h1> Trends </h1>
+<h3><%= link_to "Post New Trend", new_trend_path %></h3>
+
 
 <% @trends.each do |trend| %>
   <a href="/trends/<%= trend.id%>">

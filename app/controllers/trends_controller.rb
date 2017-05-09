@@ -18,15 +18,17 @@ class TrendsController < ApplicationController
   end
 
   def edit
-
+    @trend = Trend.find(params[:id])
   end
 
   def updated
-
+    @trend = Trend.find(params[:id])
+    @trend.update(trend_params)
+    redirect_to trend_path(@trend)
   end
 
 
-    private
+  private
   def trend_params
     params.require(:trend).permit(:title, :description, :photo_url, :ref_link)
   end
