@@ -1,5 +1,5 @@
 <h3><%= link_to 'Back', :back %></h3>
-<h1><%= @trend.title%></h1>
+<h1><%= @trend.title%><%= link_to "edit", edit_trend_path(@trend) %></h1>
 <h6><%= @trend.created_at %></h6>
 <img src='<%= @trend.photo_url %>' alt="<%= @trend.title %>" />
 <h4> <%= @trend.description %> <h4>
