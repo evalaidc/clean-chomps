@@ -6,7 +6,7 @@
 <a href='<%= @trend.ref_link %>' target="_blank"> Find Out More </a>
 
 <br/>
-<h2> Comments </h2>
+<h2> Comments (<%= link_to "+", new_trend_comment_path(@trend) %>)</h2>
 <% @comments.each do |comment| %>
   <p><%= comment.body %></p>
   <h4> - <%= comment.author %></h4>
