@@ -27,6 +27,11 @@ class TrendsController < ApplicationController
     redirect_to trend_path(@trend)
   end
 
+  def destroy
+    @trend = Trend.find(params[:id])
+    @trend.destroy
+    redirect_to trends_path()
+  end
 
   private
   def trend_params
