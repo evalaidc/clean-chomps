@@ -1,6 +1,6 @@
 <h3><%= link_to 'Back', :back %></h3>
 <h1><%= @trend.title%> <span>(<%= link_to "Edit", edit_trend_path(@trend) %>)</span></h1>
-<h6><%= @trend.created_at %></h6>
+<h6>Created: <%= @trend.created_at.to_formatted_s(:long) %></h6>
 <img src='<%= @trend.photo_url %>' alt="<%= @trend.title %>" />
 <h4> <%= @trend.description %> <h4>
 <a href='<%= @trend.ref_link %>' target="_blank"> Find Out More </a>
@@ -10,6 +10,10 @@
 <% @comments.each do |comment| %>
   <p><%= comment.body %></p>
   <h4> - <%= comment.author %></h4>
-  <h6><%= comment.updated_at %></h6>
+  <h6>Updated: <%= comment.updated_at.to_formatted_s(:long) %> |
+    <%= form_for [@trend, comment], url: "/trends/#{@trend.id}/comments/#{comment.id}", method: :delete do |f| %>
+      <% f.submit "Delete Comment", class: "btn-delete" %>
+      <%end%>
+  </h6>
   <hr/>
 <%end%>
