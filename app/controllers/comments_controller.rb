@@ -10,12 +10,12 @@ class CommentsController < ApplicationController
     redirect_to trend_path(@trend)
   end
 
-  def destroy
-    @trend = Trend.find(params[:trend_id])
-    @comment = Comment.find(params[:id])
-    @comment.destroy
-    redirect_to trend_path(@trend)
-  end
+  # def destroy
+  #   @trend = Trend.find(params[:trend_id])
+  #   @comment = Comment.find(:comment_id)
+  #   @comment.destroy
+  #   redirect_to trend_path(@trend)
+  # end
 
   private
   def comment_params

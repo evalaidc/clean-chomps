@@ -11,9 +11,9 @@
   <p><%= comment.body %></p>
   <h4> - <%= comment.author %></h4>
   <h6>Updated: <%= comment.updated_at.to_formatted_s(:long) %> |
-    <%= form_for [@trend, comment], url: "/trends/#{@trend.id}/comments/#{comment.id}", method: :delete do |f| %>
-      <% f.submit "Delete Comment", class: "btn-delete" %>
-      <%end%>
+    <%# form_for [@trend, comment], url: "/trends/#{@trend.id}/comments/#{comment.id}", method: :delete do |f| %>
+      <%# f.submit "Delete Comment", class: "btn-delete" %>
+      <%#end%>
   </h6>
   <hr/>
 <%end%>
