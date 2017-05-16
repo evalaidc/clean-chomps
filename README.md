@@ -27,3 +27,8 @@ Things you may want to cover:
 ## Planning
 ERD
 https://drive.google.com/file/d/0Bw3u4FmGZdiKeHoyYW5EcWJxVW8/view?usp=sharing
+
+
+## Technologies
+
+Made using Ruby on Rails and tested with RSpec
